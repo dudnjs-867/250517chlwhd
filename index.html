@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>약물 추천 웹앱</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💊 약물 추천 & 정보</h1>
+
+    <h2>🩺 증상 선택</h2>
+    <div class="checkbox-group" id="symptoms">
+      <label><input type="checkbox" value="두통"> 두통</label>
+      <label><input type="checkbox" value="열"> 열</label>
+      <label><input type="checkbox" value="기침"> 기침</label>
+      <label><input type="checkbox" value="코막힘"> 코막힘</label>
+      <label><input type="checkbox" value="콧물"> 콧물</label>
+      <label><input type="checkbox" value="알레르기"> 알레르기</label>
+      <label><input type="checkbox" value="근육통"> 근육통</label>
+      <label><input type="checkbox" value="소화불량"> 소화불량</label>
+      <label><input type="checkbox" value="복통"> 복통</label>
+      <label><input type="checkbox" value="설사"> 설사</label>
+      <label><input type="checkbox" value="변비"> 변비</label>
+      <label><input type="checkbox" value="불면증"> 불면증</label>
+    </div>
+
+    <h2>💊 복용 중인 약물 선택</h2>
+    <div class="checkbox-group" id="currentMeds">
+      <label><input type="checkbox" value="타이레놀"> 타이레놀</label>
+      <label><input type="checkbox" value="애드빌"> 애드빌</label>
+      <label><input type="checkbox" value="판콜"> 판콜</label>
+      <label><input type="checkbox" value="파스"> 파스</label>
+      <label><input type="checkbox" value="지르텍"> 지르텍</label>
+      <label><input type="checkbox" value="베나드릴"> 베나드릴</label>
+      <label><input type="checkbox" value="겔포스"> 겔포스</label>
+      <label><input type="checkbox" value="스멕타"> 스멕타</label>
+      <label><input type="checkbox" value="임팩타민"> 임팩타민</label>
+      <label><input type="checkbox" value="멜라토닌"> 멜라토닌</label>
+    </div>
+
+    <button onclick="recommend()">💡 추천 받기</button>
+
+    <div id="result" style="display:none;">
+      <h2>🔍 추천 결과</h2>
+      <div id="recommendation"></div>
+      <canvas id="scoreChart"></canvas>
+      <div id="warnings"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
